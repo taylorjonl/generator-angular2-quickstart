@@ -1,0 +1,17 @@
+{
+  "name": "generator-angular2-quickstart",
+  "version": "0.0.1",
+  "description": "Angular2 generator based off of the angular 2 quickstart guide",
+  "files": [
+    "generators/app"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.20.2"
+  },
+  "license": "ISC",
+  "author": {
+    "name": "4tron",
+    "email": "cuthbert.tim@hotmail.com"
+  },
+  "keywords": ["yeoman-generator"]
+}
