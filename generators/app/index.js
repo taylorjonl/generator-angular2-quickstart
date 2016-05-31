@@ -75,7 +75,7 @@ module.exports = generator.Base.extend({
                 this.templatePath('_index.html'),
                 this.destinationPath('index.html'),
                 {
-                    selectorName: _.kekabCase(this.config.get('selectorName')),
+                    selectorName: _.kebabCase(this.config.get('selectorName')),
                     appName: this.config.get('appName'),
                 }
             )
@@ -87,17 +87,17 @@ module.exports = generator.Base.extend({
                 this.templatePath('app/_app.component.ts'),
                 this.destinationPath('app/app.component.ts'),
                 {
-                    selectorName: _.kekabCase(this.config.get('selectorName')),
+                    selectorName: _.kebabCase(this.config.get('selectorName')),
                 }
             )
         },
-         // Config files
+        
+        // Config files
         configfiles: function() {
-                this.copy('_systemjs.config.js','systemjs.config.js');
-                this.copy('_tsconfig.json','tsconfig.json');
-                this.copy('_typings.json','typings.json');
-                this.copy('_styles.css','styles.css');
-                this.copy('app/_main.ts','app/main.ts');
+            var filesArr = ['_systemjs.config.js','_tsconfig.json','_typings.json','_styles.css','app/_main.ts'];
+            _.forEach(filesArr,(file) => {
+                this.copy(file,_.replace(file,'_',''));                
+            })
         },
     },
 
