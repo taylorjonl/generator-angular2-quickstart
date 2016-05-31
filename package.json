@@ -13,5 +13,11 @@
     "name": "4tron",
     "email": "cuthbert.tim@hotmail.com"
   },
-  "keywords": ["yeoman-generator"]
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/4tron/generator-angular2-quickstart"
+  }
 }
