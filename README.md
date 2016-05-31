@@ -19,7 +19,7 @@ https://angular.io/docs/ts/latest/quickstart.html
 
 Navigate into the folder for your project
 
-<code>> npm i -g generator-angular2-quickstart</code>
+<code>> npm install -g generator-angular2-quickstart</code>
 
 <code>> yo angular2-quickstart</code>
 
