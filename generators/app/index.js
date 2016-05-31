@@ -68,16 +68,6 @@ module.exports = generator.Base.extend({
             )
         },
 
-        // Config files
-        configfiles: function() {
-                this.copy('_systemjs.config.js','systemjs.config.js');
-                this.copy('_tsconfig.json','tsconfig.json');
-                this.copy('_typings.json','typings.json');
-                this.copy('_styles.css','styles.css');
-                this.copy('app/_app.component.ts','app/app.component.ts');
-                this.copy('app/_main.ts','app/main.ts');
-        },
-
         // Index file
         indexfile: function() {
             this.fs.copyTpl(
@@ -88,7 +78,26 @@ module.exports = generator.Base.extend({
                     appName: this.config.get('appName'),
                 }
             )
-        }
+        },
+        
+        // Main component file
+         componentfile: function() {
+            this.fs.copyTpl(
+                this.templatePath('app/_app.component.ts'),
+                this.destinationPath('app/app.component.ts'),
+                {
+                    selectorName: this.config.get('selectorName'),
+                }
+            )
+        },
+         // Config files
+        configfiles: function() {
+                this.copy('_systemjs.config.js','systemjs.config.js');
+                this.copy('_tsconfig.json','tsconfig.json');
+                this.copy('_typings.json','typings.json');
+                this.copy('_styles.css','styles.css');
+                this.copy('app/_main.ts','app/main.ts');
+        },
     },
 
     conflicts: function () {
