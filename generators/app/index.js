@@ -57,10 +57,10 @@ module.exports = generator.Base.extend({
     writing: {
 
         // Package.json
-        packagefile: () => {
+        packagefile: function(){
             this.fs.copyTpl(
                 this.templatePath('_package.json'),
-                this.destinationPate('package.json'),
+                this.destinationPath('package.json'),
                 {
                     appName: this.config.get('appName'),
                     appAuthor: this.config.get('appAuthor')
@@ -69,18 +69,20 @@ module.exports = generator.Base.extend({
         },
 
         // Config files
-        configfiles: () => {
-            var filesArr = ['_systemjs.config', '_tsconfig.json', '_typings.json', '_styles.css']
-            filesArr.forEach(filesArr, (file) => {
-                this.copy(file, file.substring(1))
-            });
+        configfiles: function() {
+                this.copy('_systemjs.config.js','systemjs.config.js');
+                this.copy('_tsconfig.json','tsconfig.json');
+                this.copy('_typings.json','typings.json');
+                this.copy('_styles.css','styles.css');
+                this.copy('app/_app.component.ts','app/app.component.ts');
+                this.copy('app/_main.ts','app/main.ts');
         },
 
         // Index file
-        indexfile: () => {
+        indexfile: function() {
             this.fs.copyTpl(
                 this.templatePath('_index.html'),
-                this.destinationPate('index.html'),
+                this.destinationPath('index.html'),
                 {
                     selectorName: this.config.get('selectorName'),
                     appName: this.config.get('appName'),
