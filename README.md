@@ -5,15 +5,17 @@ https://angular.io/docs/ts/latest/quickstart.html
 
 ##Directory structure
 
-- app
+* app <br />
+  |-- app.component.ts<br />
+  |-- main.ts
 - node_modules ( after npm install )
-- typings ( after npm install )
-- index.html
-- package,json
-- styles.css
-- systemjs.config.js
-- tsconfig.json
-- typings
+- typings ( after npm install ) <br />
+|- index.html<br />
+|- package,json<br />
+|- styles.css<br />
+|- systemjs.config.js<br />
+|- tsconfig.json<br />
+|- typings<br />
 
 ##Getting started
 
