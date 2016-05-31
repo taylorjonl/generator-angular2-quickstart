@@ -9,15 +9,14 @@
     "yeoman-generator": "^0.20.2"
   },
   "license": "ISC",
+  "homepage": "https://github.com/4tron/generator-angular2-quickstart",
   "author": {
     "name": "4tron",
     "email": "cuthbert.tim@hotmail.com"
   },
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "angular2"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/4tron/generator-angular2-quickstart"
-  }
+  "repository": "4tron/generator-angular2-quickstart"
 }
