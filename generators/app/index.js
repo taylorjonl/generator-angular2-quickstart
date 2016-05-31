@@ -1,4 +1,5 @@
-var generator = require('yeoman-generator');
+var generator = require('yeoman-generator'),
+    _ = require('lodash');
 
 module.exports = generator.Base.extend({
 
@@ -62,8 +63,8 @@ module.exports = generator.Base.extend({
                 this.templatePath('_package.json'),
                 this.destinationPath('package.json'),
                 {
-                    appName: this.config.get('appName'),
-                    appAuthor: this.config.get('appAuthor')
+                    appName: _.lowerCase(this.config.get('appName')),
+                    appAuthor: _.startCase(this.config.get('appAuthor'))
                 }
             )
         },
@@ -74,7 +75,7 @@ module.exports = generator.Base.extend({
                 this.templatePath('_index.html'),
                 this.destinationPath('index.html'),
                 {
-                    selectorName: this.config.get('selectorName'),
+                    selectorName: _.kekabCase(this.config.get('selectorName')),
                     appName: this.config.get('appName'),
                 }
             )
@@ -86,7 +87,7 @@ module.exports = generator.Base.extend({
                 this.templatePath('app/_app.component.ts'),
                 this.destinationPath('app/app.component.ts'),
                 {
-                    selectorName: this.config.get('selectorName'),
+                    selectorName: _.kekabCase(this.config.get('selectorName')),
                 }
             )
         },
