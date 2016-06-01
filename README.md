@@ -23,7 +23,7 @@ Navigate into the folder for your project
 
 <code>> npm install -g generator-angular2-quickstart</code>
 
-<code>> yo angular2-quickstart</code>
+<code>> yo angular2-quickstart</code> ( you need yeoman for this step <code>> npm install -g yo</code> ) 
 
 <code>> npm start</code>
 
