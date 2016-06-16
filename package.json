@@ -1,6 +1,6 @@
 {
   "name": "generator-angular2-quickstart",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Angular2 generator based off of the angular 2 quickstart guide",
   "files": [
     "generators/app"
