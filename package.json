@@ -19,5 +19,5 @@
     "yeoman-generator",
     "angular2"
   ],
-  "repository": "4tron/generator-angular2-quickstart",
+  "repository": "4tron/generator-angular2-quickstart"
 }
