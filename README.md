@@ -3,7 +3,7 @@
 A simple angular2 generator based of of the quickstart tutorial from angular.io
 https://angular.io/docs/ts/latest/quickstart.html
 
-Updated to angular2-RC2 - https://github.com/angular/angular/blob/master/CHANGELOG.md
+Current version: [2.0.0-rc.3 (2016-06-21)](https://github.com/angular/angular/blob/master/CHANGELOG.md)
 
 ##Directory structure
 
