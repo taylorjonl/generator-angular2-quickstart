@@ -63,7 +63,7 @@ module.exports = generator.Base.extend({
                 this.templatePath('_package.json'),
                 this.destinationPath('package.json'),
                 {
-                    appName: _.lowerCase(this.config.get('appName')),
+                    appName: _.kebabCase(_.lowerCase(this.config.get('appName'))),
                     appAuthor: _.startCase(this.config.get('appAuthor'))
                 }
             )
