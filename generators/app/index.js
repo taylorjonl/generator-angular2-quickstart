@@ -63,7 +63,7 @@ module.exports = generator.Base.extend({
                 this.templatePath('_package.json'),
                 this.destinationPath('package.json'),
                 {
-                    appName: _.lowerCase(this.config.get('appName')),
+                    appName:  _.kebabCase(_.lowerCase(this.config.get('appName'))),
                     appAuthor: _.startCase(this.config.get('appAuthor'))
                 }
             )
@@ -75,7 +75,7 @@ module.exports = generator.Base.extend({
                 this.templatePath('_index.html'),
                 this.destinationPath('index.html'),
                 {
-                    selectorName: _.kebabCase(this.config.get('selectorName')),
+                    selectorName: _.kebabCase(_.lowerCase(this.config.get('selectorName'))),
                     appName: this.config.get('appName'),
                 }
             )
@@ -85,16 +85,29 @@ module.exports = generator.Base.extend({
          componentfile: function() {
             this.fs.copyTpl(
                 this.templatePath('app/_app.component.ts'),
-                this.destinationPath('app/app.component.ts'),
+                this.destinationPath(`app/${_.kebabCase(_.lowerCase(this.config.get('selectorName')))}.component.ts`),
                 {
-                    selectorName: _.kebabCase(this.config.get('selectorName')),
+                    selectorName: _.kebabCase(_.lowerCase(this.config.get('selectorName'))),
+                    appNameUpper: _.capitalize(_.camelCase(this.config.get('appName')))
+                }
+            )
+        },
+
+        // Main component file
+         mainfile: function() {
+            this.fs.copyTpl(
+                this.templatePath('app/_main.ts'),
+                this.destinationPath('app/main.ts'),
+                {
+                    selectorName: _.kebabCase(_.lowerCase(this.config.get('selectorName'))),
+                    appNameUpper: _.capitalize(_.camelCase(this.config.get('appName')))
                 }
             )
         },
         
         // Config files
         configfiles: function() {
-            var filesArr = ['_systemjs.config.js','_tsconfig.json','_typings.json','_styles.css','app/_main.ts'];
+            var filesArr = ['_systemjs.config.js','_tsconfig.json','_typings.json','_styles.css'];
             _.forEach(filesArr,(file) => {
                 this.copy(file,_.replace(file,'_',''));                
             })

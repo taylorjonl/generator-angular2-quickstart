@@ -3,7 +3,7 @@
 A simple angular2 generator based of of the quickstart tutorial from angular.io
 https://angular.io/docs/ts/latest/quickstart.html
 
-Current version: [2.0.0-rc.3 (2016-06-21)](https://github.com/angular/angular/blob/master/CHANGELOG.md)
+Current version: [2.0.0-rc.4 (2016-06-30)](https://github.com/angular/angular/blob/master/CHANGELOG.md)
 
 ##Directory structure
 
@@ -23,9 +23,9 @@ Current version: [2.0.0-rc.3 (2016-06-21)](https://github.com/angular/angular/bl
 
 Navigate into the folder for your project
 
-<code>> npm install -g generator-angular2-quickstart</code>
+<code>> npm install -g generator-angular2-quickstart</code> ( you will need [nodejs](https://nodejs.org/en/) for this step )
 
-<code>> yo angular2-quickstart</code> ( you need yeoman for this step <code>> npm install -g yo</code> ) 
+<code>> yo angular2-quickstart</code> ( you will need yeoman for this step <code>> npm install -g yo</code> ) 
 
 <code>> npm start</code>
 
@@ -42,7 +42,7 @@ There are 3 extra options you can use with the generator
    Will automagically run the npm start command , transpile the typescript and launch the 
    browser with the newly generated app.
 
-3. npmstart: <code>> yo angular2-quickstart --vscode</code>
+3. vscode: <code>> yo angular2-quickstart --vscode</code>
 
    Will launch visual studio code once it has completed the generation of the project.
    
