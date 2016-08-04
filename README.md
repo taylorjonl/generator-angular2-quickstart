@@ -5,6 +5,9 @@ https://angular.io/docs/ts/latest/quickstart.html
 
 Current version: [2.0.0-rc.4 (2016-06-30)](https://github.com/angular/angular/blob/master/CHANGELOG.md)
 
+
+*note: abandoning project, if you want to take it over just pm - project will be deleted once angular 2 final release is ready*
+
 ##Directory structure
 
 * app <br />
