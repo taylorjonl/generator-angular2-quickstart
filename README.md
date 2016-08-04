@@ -49,8 +49,5 @@ There are 3 extra options you can use with the generator
 
    Will launch visual studio code once it has completed the generation of the project.
    
-##Roadmap
-
-Will try keep this upto date with changes in the quickstart tutorial. 
    
    
